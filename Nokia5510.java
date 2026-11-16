@@ -213,8 +213,14 @@ public class Nokia5510{
     int choice = input.nextInt();
     switch(choice) {
       case 1 -> sendText();
-      case 2 -> System.out.println("You have no new messages.");
-      case 3 -> System.out.printf("You have no messages in outbox.");
+      case 2 -> {
+        System.out.println("You have no new messages.");
+        messagesMenu();
+      }
+      case 3 -> {
+        System.out.printf("You have no messages in outbox.");
+        messagesMenu();
+      }
       case 0 -> mainMenu();
       default -> {
         System.out.println("Invalid option.");
